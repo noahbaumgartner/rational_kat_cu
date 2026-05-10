@@ -9,6 +9,9 @@ sources = glob.glob('src/*.cpp')+glob.glob('src/*.cu')
 setup(
     name='kat_rational',  # Name of the package
     version='0.4',  # Version of the package
+    packages=['kat_rational'],
+    package_data={'kat_rational': ['init.json']},
+    include_package_data=True,
     author='adamdad',  # Name of the author
     author_email='yxy_adadm@qq.com',  # Contact email of the author
     description='A simple example of a PyTorch extension, implementing a group-wise rational function for kat',  # Short description
